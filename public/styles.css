@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Goudy+Bookletter+1911&family=Nanum+Gothic+Coding&family=Roboto+Condensed:wght@700&display=swap');
+ 
+ 
+ /* BASICS */
+*{
+    font-family: 'Cinzel', serif;
+}
+
+body{
+    background: #d5cec5;
+    max-width: 2200px;
+    margin: 20px;
+    padding: 0 20px;
+}
+
+h1, h3, h4{
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+p{
+    text-align: center;
+}
+
+/* NAV STYLES */
+nav{
+    text-align: center;
+    /* display: flex; */
+    justify-content: space between; 
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #99713C;
+    text-transform: uppercase;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+nav p, a{
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+nav p, a:hover{
+    color: #99713C; 
+}
+
+section{
+    align-items: center;
+}
+
+/* NEW QUOTE STYLES */
+.create-quote form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.create-quote input, 
+.create-quote textarea{
+    display: block;
+    width: 100%;
+    margin: 10px 0; 
+    padding: 10px;
+}
+
+.create-quote button{
+    background: none;
+    color: black;
+    cursor: pointer; 
+}
+
+.create-quote button:hover{
+    color: #99713C;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+textarea{
+    height: 50px;
+}
+
+/* footer styles */
+footer{
+    text-align: center;
+    margin: 80px auto 20px;
+}
+
+footer:hover{
+    cursor: default;
+}

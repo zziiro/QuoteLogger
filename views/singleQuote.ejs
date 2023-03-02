@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    
+    <!-- nav -->
+    <%- include('./partials/nav') %>
+
+    <div class="quoteDetails content">
+        <h1>Origin: <%= quote.quoteOrigin %> </h1>
+        <h4>Emotion: <%= quote.emotion %> </h4>
+        <p> "<%= quote.quote %>" </p>
+
+        <a class="delete" data-doc="<%= quote.id %>">
+            <p>Delete Quote</p>
+        </a>
+    </div>
+
+    <script>
+        const trashcan = document.querySelector('a.delete');
+
+        trashcan.addEventListener('click', (e) => {
+            const endpoint = `/${trashcan.dataset.doc}`
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch((err) => console.log('[ERROR]', err))
+        })
+    </script>
+
+    <%- include('./partials/footer') %>;
+</body>
+</html>

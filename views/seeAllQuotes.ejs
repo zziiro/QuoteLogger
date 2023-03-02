@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+
+<body>
+    <!-- nav -->
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>All Quotes!</h1>
+
+    <div class="quotes">
+        <% if(quotes.length > 0){ %>
+            <% quotes.forEach(quote => { %>
+                <div class="single" >
+                    <a href="/<%= quote._id %>">
+                        <h3 class="origin"> <%= quote.quoteOrigin %> </h3>
+                        <p class="emotion"> <%=  quote.emotion %> </p>
+                    </a>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>Sorry, There are no saved quotes!</p>
+        <% } %>
+    </div>
+
+    <!-- footer -->
+    <%- include('./partials/footer.ejs') %>
+
+    <style>
+        /* single quote styles */
+
+        .single {
+            display: grid;
+            border: 3px solid #99713C;
+            margin-bottom: 5px;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+        .single:hover{
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 1.3em;
+            border: 3px solid #473113;
+        }
+    </style>
+
+</body>
+</html>
